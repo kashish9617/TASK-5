@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Project | Optimized Web App</title>  <!-- Optimized CSS -->  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f4f6f8; color: #333; }
+
+    header {
+      background: linear-gradient(135deg, #2f9e9e, #4fb3b3);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #ffffff;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2f9e9e;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    button {
+      background: #2f9e9e;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #248181; }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Device Preview Designs */
+    .device-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .device {
+      background: #111;
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .device .screen {
+      background: #fff;
+      color: #2f9e9e;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      height: 200px;
+      width: 120px;
+      text-align: center;
+    }
+
+    .tablet .screen { width: 180px; height: 220px; }
+    .desktop .screen { width: 260px; height: 180px; }
+
+    /* Mobile Design */
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      header p { font-size: 14px; }
+      nav { flex-direction: column; gap: 10px; }
+      section { padding: 25px 15px; }
+      .card { padding: 15px; text-align: center; }
+      button { width: 100%; }
+    }
+
+    /* Tablet Design */
+    @media (min-width: 601px) and (max-width: 992px) {
+      header h1 { font-size: 28px; }
+      nav { gap: 15px; }
+      .card-container { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Desktop Design */
+    @media (min-width: 993px) {
+      header h1 { font-size: 34px; }
+      .card-container { grid-template-columns: repeat(3, 1fr); }
+    }
+    }
+  </style></head>
+<body>  <header>
+    <h1>Final Project & Optimization</h1>
+    <p>Responsive • Fast • Cross-Browser Web Application</p>
+  </header>  <nav>
+    <a href="#features">Features</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#stats">Stats</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section id="features">
+    <h2>✨ Project Highlights</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>🚀 Dynamic Content</h3>
+        <p>JavaScript se live interaction aur alerts.</p>
+        <button onclick="showMessage('🚀 Dynamic Content Loaded!')">Try</button>
+      </div><div class="card">
+    <h3>⚡ Fast Performance</h3>
+    <p>Optimized code for fast loading experience.</p>
+    <button onclick="showMessage('⚡ Website is Super Fast!')">Check</button>
+  </div>
+
+  <div class="card">
+    <h3>📱 Responsive UI</h3>
+    <p>Mobile, tablet aur desktop friendly design.</p>
+    <button onclick="showMessage('📱 Fully Responsive Design!')">View</button>
+  </div>
+</div>
+
+  </section>  <section id="gallery">
+    <h2>🖼️ Responsive Design Preview</h2>
+    <p>Below preview shows how this website looks on different devices.</p>
+    <div class="device-container">
+      <div class="device mobile">
+        <div class="screen">📱<br>Mobile View</div>
+      </div>
+      <div class="device tablet">
+        <div class="screen">📱📱<br>Tablet View</div>
+      </div>
+      <div class="device desktop">
+        <div class="screen">🖥️<br>Desktop View</div>
+      </div>
+    </div>
+  </section>  <section id="stats">
+    <h2>📊 Live Project Stats</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3 id="visitorCount">0</h3>
+        <p>Visitors</p>
+      </div>
+      <div class="card">
+        <h3>99%</h3>
+        <p>Performance Score</p>
+      </div>
+      <div class="card">
+        <h3>100%</h3>
+        <p>Responsive</p>
+      </div>
+    </div>
+  </section>  <section id="about">
+    <h2>About This Project</h2>
+    <p>
+      This is a capstone web application built using HTML, CSS, and JavaScript.
+      It focuses on performance optimization, responsiveness, and cross-browser compatibility.
+    </p>
+  </section>  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: example@project.com</p>
+    <p>Company: ApexPlanet Software Pvt Ltd</p>
+  </section>  <footer>
+    <p>© 2025 Final Project | Optimized Web App</p>
+  </footer>  <!-- Optimized JavaScript -->  <script>
+    function showMessage(message) {
+      alert(message);
+    }
+
+    // Fake visitor counter animation
+    let count = 0;
+    setInterval(() => {
+      if (count < 120) {
+        count++;
+        document.getElementById('visitorCount').innerText = count;
+      }
+    }, 50);
+  </script></body>
+</html>
